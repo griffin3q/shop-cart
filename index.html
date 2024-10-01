@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/index.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="logo--wrapper">
+                <h1 class="logo">Jully's shopping cart</h1>
+                <div id="darkmode-toggle">		
+                    <input type="checkbox" id="toggle" class="input-toggle"/>
+                    <label for="toggle" class="label-toggle"></label>
+                </div>
+            </div>
+            <img src="/assets/booba.png" alt="A cat inside of a grocery cart illustration">
+            <div class="input--wrapper">
+                <input type="text" id="input-field" placeholder="Bread">
+                <span id="input--empty-error-message"></span>
+            </div>
+            <button id="add-button">Add to cart</button>
+            <ul id="shopping-list">
+                <!--ITEMS HERE!-->
+            </ul>
+        </div>
+        <div class="footer">
+        
+        </div>
+    </main> 
+
+    <script src="/assets/js/index.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+/* GENERAL STYLES */
+:root {
+    --text: hsl(0, 0%, 2%);
+    --background: #fff;
+    --primary: #675aa0;
+    --secondary: hsl(161, 69%, 90%);
+    --accent: #5c1fa0;
+    --accent-hover: #8983cb;
+}
+
+.darkmode {
+    --text: #fff;
+    --background: hsl(0, 0%, 2%);
+    --primary: #675aa0;
+    --secondary: hsl(161, 69%, 10%);
+    --accent: #5c1fa0;
+    --accent-hover: #fff;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+    background-color: var(--background);
+    user-select: none;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    margin: 30px auto;
+    gap: 0.5rem;
+}
+
+.logo--wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo {
+    margin: 0;
+    font-size: 1rem;
+    color: var(--accent);
+}
+
+img {
+    width: 150px;
+    margin: 0 auto;
+}
+
+input {
+    color: var(--texts);
+    background-color: var(--primary);
+    border: 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+}
+
+#add-button {
+    color: var(--background);
+    background-color: var(--accent);
+    border: 0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Work Sans', sans-serif;
+}
+
+#add-button:hover {
+    background-color: var(--accent-hover);
+}
+
+/* SHOPPING LIST */
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+}
+
+ul li {
+    text-align: center;
+    font-size: 1.25rem;
+    padding: 0.938rem;
+    border-radius: 0.5rem;
+    flex-grow: 1;
+    color: var(--text);
+    background-color: var(--secondary);
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+ul li:hover {
+    background-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+.input--wrapper {
+    display: grid;
+    gap: 0.1rem;
+}
+
+#input--empty-error-message {
+    font-size: 0.800rem;
+    color: red;
+    font-weight: bold;
+}
+
+.label-toggle {
+	position: relative;
+	display: block;
+	width: 3rem;
+	height: 1.5rem;
+	border-radius: 100px;
+	background-color: var(--accent);
+	overflow: hidden;
+	cursor: pointer;
+	&:before,
+	&:after {
+		display: block;
+		position: absolute;
+		content: "";		
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		top: 4px;
+		left: 5px;
+		transition: .5s ease;
+	}
+	&:before {
+		background-color: #ffa41b;
+
+	}
+
+	&:after {
+		background-color: var(--accent);
+		left: -38px;
+		transform: scale(0.00001);
+	}
+}
+
+.input-toggle[type="checkbox"] {
+	display: none;
+	&:checked + label {
+		&:before {
+			background-color: #FFF;
+			transform: translateX(23px);
+		}
+		
+		&:after {
+			transform: translateX(60px) scale(1);
+		}
+	}
+}
+
+.footer {
+    text-align: center;
+    font-size: 11px; text-align: center; margin-top: 4rem;
+    color: var(--text)
+}
+
+.footer a {
+    font-weight: bold;
+    text-decoration: none;
+}
